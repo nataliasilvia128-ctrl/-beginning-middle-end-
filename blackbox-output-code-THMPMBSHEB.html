@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginning Middle End</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela 1: Cadeado -->
+    <div id="tela1" class="tela">
+        <h1 class="titulo">O Dia Que Nos Encontramos</h1>
+        <div class="cadeado">
+            <div class="coracao"></div> <!-- O coração com degradê -->
+            <div class="combinacao">
+                <input type="number" min="0" max="9" maxlength="1" id="digito1" placeholder="0">
+                <input type="number" min="0" max="9" maxlength="1" id="digito2" placeholder="4">
+                <input type="number" min="0" max="9" maxlength="1" id="digito3" placeholder="2">
+                <input type="number" min="0" max="9" maxlength="1" id="digito4" placeholder="0">
+                <button id="verificar">Abrir</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela 2: Cartão Digital -->
+    <div id="tela2" class="tela" style="display: none;">
+        <div class="cartao">
+            <div class="moldura">
+                <!-- Moldura com corações (usando CSS) -->
+                <p class="texto-romantico">
+                    Nos fios invisíveis do destino, nossos corações parecem entrelaçados pra sempre. <br>
+                    O tempo pode passar, as estações podem mudar mas o nosso amor se ergue como uma rocha, inabalável diante dessas marés da vida.
+                </p>
+                <img src="qr-code.png" alt="QR Code para a playlist" class="qr-code"> <!-- Substitua por sua imagem de QR Code -->
+            </div>
+            <div class="interacao">
+                <p>Arraste o cursor para descobrir a trilha sonora do nosso amor 💞</p>
+                <div class="scratch-card" id="scratch">
+                    <img src="playlist-cover.jpg" alt="Capa da Playlist" style="display: none;"> <!-- Substitua por uma imagem da playlist -->
+                    <div class="overlay"></div> <!-- Overlay para o efeito de raspadinha -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
