@@ -3,54 +3,53 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Playfair Display', serif;
-    background-color: #fff5f5; /* Branco suave/pastel */
+    background-color: #FFF5F7; /* Rosa-claro */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    transition: all 0.5s ease; /* Transição suave entre telas */
+    transition: all 0.5s ease;
 }
 
 .tela {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
 }
 
 /* Tela 1: Cadeado */
 .titulo {
-    font-family: 'Great Vibes', cursive;
-    color: #ff6b81; /* Rosa-claro */
+    font-family: 'Dancing Script', cursive;
+    color: #F45A7A; /* Rosa para o texto */
     font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cadeado-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cadeado-imagem {
+    width: 200px;  /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));  /* Sombra suave */
+    box-shadow: 0 0 10px rgba(244, 90, 122, 0.3);  /* Leve brilho rosa */
+    border-radius: 10px;  /* Bordas arredondadas para suavidade */
     margin-bottom: 20px;
 }
 
-.cadeado {
-    position: relative;
-    width: 200px;
-    height: 200px;
-}
-
-.coracao {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #ff9f9f, #ffd3b6); /* Degradê rosa e pêssego */
-    border-radius: 50% 50% 0 0; /* Forma de coração aproximada */
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Para um coração mais preciso */
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .combinacao {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     gap: 10px;
+    margin-top: 20px;
 }
 
 .combinacao input {
@@ -58,15 +57,15 @@ body {
     height: 40px;
     text-align: center;
     font-size: 1.2em;
-    border: 2px solid #ff6b81;
+    border: 2px solid #F45A7A;
     border-radius: 5px;
     background: #fff;
-    color: #ff6b81;
+    color: #F45A7A;
 }
 
 .combinacao button {
     padding: 10px 20px;
-    background: #ff6b81; /* Vermelho suave */
+    background: #F45A7A;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -75,28 +74,28 @@ body {
 }
 
 .combinacao button:hover {
-    background: #ff4757; /* Vermelho mais vivo */
+    background: #ff4757;
 }
 
 /* Tela 2: Cartão Digital */
 .cartao {
     background: #fff;
     padding: 30px;
-    border: 2px solid #ffd3b6; /* Pêssego */
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 107, 129, 0.1);
-    max-width: 80%;
-    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra leve */
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
 }
 
 .moldura {
-    position: relative;
+    border: 1px dashed #F45A7A;  /* Bordas suaves */
     padding: 20px;
-    border: 1px dashed #ff6b81; /* Bordas decoradas */
+    position: relative;
 }
 
 .moldura::before {
-    content: '♥'; /* Coração decorativo */
+    content: '♥';
     position: absolute;
     top: -10px;
     left: -10px;
@@ -113,34 +112,36 @@ body {
     font-size: 1.5em;
 }
 
+.conteudo-cartao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* Centralizado verticalmente */
+    gap: 20px;  /* Espaçamento equilibrado */
+}
+
 .texto-romantico {
     font-family: 'Playfair Display', serif;
     font-size: 1.2em;
     color: #333;
     line-height: 1.6;
+    text-align: left;  /* Alinhado à esquerda */
+    flex: 1;  /* Ocupa o espaço disponível */
 }
 
-.qr-code {
-    margin-top: 20px;
+.qr-code-imagem {
     width: 150px;
     height: 150px;
-    border: 2px solid #ffd3b6;
-    border-radius: 10px;
+    border-radius: 10px;  /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    display: block;
 }
 
-/* Efeito Interativo: Raspadinha */
-.interacao {
-    margin-top: 20px;
-    position: relative;
-}
-
+/* Efeito de Raspadinha */
 .scratch-card {
-    width: 200px;
-    height: 200px;
-    background: #ff6b81; /* Cor de overlay */
-    border-radius: 10px;
+    position: relative;
+    width: 150px;
+    height: 150px;
     overflow: hidden;
-    cursor: pointer;
 }
 
 .scratch-card img {
@@ -150,37 +151,28 @@ body {
 }
 
 .scratch-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.8); /* Overlay branco semi-transparente */
-    transition: opacity 0.5s ease;
+    background: #F45A7A;  /* Camada rosa */
+    transition: all 0.5s ease;  /* Transição suave */
 }
 
-.scratch-card:hover .overlay {
-    opacity: 0; /* Revela a imagem ao passar o mouse */
+.instrucao {
+    font-family: 'Dancing Script', cursive;
+    color: #F45A7A;
+    font-size: 1.1em;
+    margin-top: 20px;
+    text-align: center;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .titulo {
-        font-size: 2em;
-    }
-    
-    .cadeado {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .combinacao input {
-        width: 30px;
-        height: 30px;
-    }
-    
-    .cartao {
-        padding: 15px;
-    }
-    
-    .texto-romantico {
-        font-size: 1em;
-    }
+    .titulo { font-size: 2em; }
+    .cadeado-imagem { width: 150px; }
+    .conteudo-cartao { flex-direction: column; align-items: center; }
+    .qr-code-imagem { width: 120px; height: 120px; }
+}
 }
