@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beginning Middle End</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>O Dia Que Nos Encontramos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Tela 1: Cadeado -->
     <div id="tela1" class="tela">
-        <h1 class="titulo">O Dia Que Nos Encontramos</h1>
-        <div class="cadeado">
-            <div class="coracao"></div> <!-- O coração com degradê -->
+        <h1 class="titulo">Will you be my?</h1>
+        <div class="cadeado-container">
+            <img src="https://github.com/nataliasilvia128-ctrl/-beginning-middle-end-/blob/c944e60ab095b619a2cf2403c9a88e930161650f/cadeado.png?raw=true" alt="Cadeado em formato de coração" class="cadeado-imagem">
             <div class="combinacao">
                 <input type="number" min="0" max="9" maxlength="1" id="digito1" placeholder="0">
                 <input type="number" min="0" max="9" maxlength="1" id="digito2" placeholder="4">
@@ -27,19 +27,18 @@
     <div id="tela2" class="tela" style="display: none;">
         <div class="cartao">
             <div class="moldura">
-                <!-- Moldura com corações (usando CSS) -->
-                <p class="texto-romantico">
-                    Nos fios invisíveis do destino, nossos corações parecem entrelaçados pra sempre. <br>
-                    O tempo pode passar, as estações podem mudar mas o nosso amor se ergue como uma rocha, inabalável diante dessas marés da vida.
-                </p>
-                <img src="https://github.com/nataliasilvia128-ctrl/-beginning-middle-end-/blob/ba203310b82bf3cb33371fe8c6eea8d8be64053a/fidzVL.png
-" alt="QR Code para a playlist" class="qr-code">            </div>
-            <div class="interacao">
-                <p>Arraste o cursor para descobrir a trilha sonora do nosso amor 💞</p>
-                <div class="scratch-card" id="scratch">
-                    <img src="https://github.com/nataliasilvia128-ctrl/-beginning-middle-end-/blob/ba203310b82bf3cb33371fe8c6eea8d8be64053a/IMG_5244.jpeg" alt="Capa da Playlist" style="display: none;">                     <div class="overlay"></div> <!-- Overlay para o efeito de raspadinha -->
+                <div class="conteudo-cartao">
+                    <p class="texto-romantico">
+                        Nos fios invisíveis do destino, nossos corações parecem entrelaçados pra sempre. <br>
+                        O tempo pode passar, as estações podem mudar mas o nosso amor se ergue como uma rocha, inabalável diante dessas marés da vida.
+                    </p>
+                    <div class="scratch-card" id="scratch">
+                        <img src="playlist-cover.jpg" alt="Capa da Playlist" class="qr-code-imagem">  <!-- Substitua por sua imagem real -->
+                        <div class="overlay"></div>  <!-- Camada para o efeito de raspadinha -->
+                    </div>
                 </div>
             </div>
+            <p class="instrucao">Arraste o cursor para descobrir a trilha sonora do nosso amor 💞</p>
         </div>
     </div>
 
